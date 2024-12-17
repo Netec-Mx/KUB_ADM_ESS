@@ -55,4 +55,4 @@ Al finalizar la práctica, los estudiantes deberían ser capaces de:
 - Comprender las secciones clave del repositorio como Issues, Pull Requests y la estructura de ramas.
 - Tener una visión clara de cómo Kubernetes gestiona el código y las contribuciones.
 
-![Imagen del resultado](./img.jpg)
+![Imagen del resultado](./img1.jpg)
