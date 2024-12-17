@@ -105,7 +105,7 @@ Revise cada paso en el entorno de Kubernetes y asegúrese de que el Pod se haya 
 - Si el Pod no se crea, verifique el archivo YAML y asegúrese de que esté bien formateado.
 - Si los logs no se muestran correctamente, asegúrese de que el contenedor se esté ejecutando sin problemas.
 
-(Imagen de resultado: ./img1.png)
+![Imagen de resultado](./img1.png)
 ```
 
 ### Explicaciones clave:
