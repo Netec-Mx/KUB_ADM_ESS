@@ -59,7 +59,7 @@ Paso 3. Prueba la instalación con un contenedor de prueba:
    sudo docker rmi hello-world
    ```
 
-#### Resultado esperado:
+## Resultado esperado:
 
 Podrás observar el mensaje: **"Hello from Docker!"**, lo que confirma que Docker está instalado y funcionando correctamente.
 
@@ -140,7 +140,7 @@ Paso 2. Inspecciona los pods:
    kubectl get pods --all-namespaces
    ```
 
-#### Resultado esperado:
+## Resultado esperado:
 
 - Nodo maestro inicializado correctamente.
 - Listado de nodos y pods reflejando el estado operativo del clúster.
