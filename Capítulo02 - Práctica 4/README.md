@@ -63,7 +63,9 @@ Paso 3. Prueba la instalación con un contenedor de prueba:
 
 Podrás observar el mensaje: **"Hello from Docker!"**, lo que confirma que Docker está instalado y funcionando correctamente.
 
-### Paso 2. Optimizar Ubuntu para instalar Kubernetes
+---
+
+### Tarea 2. Optimizar Ubuntu para instalar Kubernetes
 
 Paso 1. Cambia al entorno multiusuario:
    
@@ -95,6 +97,8 @@ Paso 4. Configura el kernel para Kubernetes:
    sudo update-grub
    ```
 
+---
+
 ### Tarea 3. Instalar Kubernetes.
 
 Paso 1. Instala las herramientas esenciales:
@@ -116,6 +120,8 @@ Paso 2. Verifica las versiones instaladas:
    kubectl version --client
    ```
 
+---
+
 ### Tarea 4. Inicializar el nodo maestro.
 
 Paso 1. Ejecuta la inicialización del nodo maestro:
@@ -125,6 +131,8 @@ Paso 1. Ejecuta la inicialización del nodo maestro:
    ```
 
 Paso 2. Copia y guarda el comando de unión que genera kubeadm.
+
+---
 
 ### Paso 5. Verificar el estado del clúster.
 
