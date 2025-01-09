@@ -114,4 +114,4 @@ Paso 3. Comparte tus experiencias y aprendizajes clave con tus compañeros o en 
 
 ## Resultado esperado:
 
-El resultado esperado es que obtengas una comprensión básica de Kubernetes, aprendas cómo acceder a su documentación y cómo interactuar con su comunidad. Además, habrás investigado cómo las organizaciones están utilizando Kubernetes y estarás listo para contribuir al conocimiento colectivo.
+El resultado esperado es que adquieras una comprensión básica de Kubernetes, aprendas a acceder a su documentación y a interactuar con su comunidad. Además, habrás investigado cómo las organizaciones utilizan Kubernetes y estarás preparado para contribuir al conocimiento colectivo.
