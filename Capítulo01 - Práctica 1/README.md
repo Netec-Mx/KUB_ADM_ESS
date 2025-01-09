@@ -8,52 +8,59 @@ Al finalizar la práctica, serás capaz de:
 - Investigar la documentación y casos de estudio de Kubernetes.
 - Participar en la comunidad de Kubernetes y compartir tus aprendizajes.
 
-## Objetivo
+## Objetivo visual:
 
 ![diagrama1](./img.jpg)
-A continucación encontraras una lista que resume las actividades a realizar en la práctica, desde la exploración del sitio web hasta la participación en la comunidad.
 
-## Actividades
+A continuación, encontrarás una lista que resume las actividades a realizar durante la práctica, que abarcan desde la exploración del sitio web hasta la participación activa en la comunidad.
 
-1. **Explorar el sitio oficial de Kubernetes**
+## Actividades a realizar:
+
+**Tarea 1. Explorar el sitio oficial de Kubernetes.**
+
+Paso 1. Visita el sitio web de Kubernetes.
+
+[https://kubernetes.io/](https://kubernetes.io/)
    
-   - **Visitar el sitio web de Kubernetes**
-     [https://kubernetes.io/](https://kubernetes.io/)
+Paso 2. Explora las secciones principales que se nombran a continuación:  
+
+- Documentation  
+- Blog  
+- Community  
+- Case Studies  
    
-   - **Explorar las secciones principales:**  
-     
-     - Documentation  
-     - Blog  
-     - Community  
-     - Case Studies  
-   
-   - **Leer "What is Kubernetes?"** para entender los conceptos básicos
+Paso 3. Lee *"What is Kubernetes?"* para comprender los conceptos básicos.
 
 ---
 
-2. **Leer la documentación de Kubernetes**
+**Tarea 2. Leer la documentación de Kubernetes.**
    
-   - **Revisar la "Quick Start Guide"** para obtener una visión general de cómo desplegar un clúster de Kubernetes.
-   - **Explorar la sección "Concepts"** para entender los componentes fundamentales de Kubernetes:
-     - Pods
-     - Nodes
-     - Clusters
-     - Deployments
+Paso 1. Revisa la *"Quick Start Guide"* para obtener una visión general de cómo desplegar un clúster de Kubernetes.
+
+Paso 2. Explora la sección *"Concepts"* para comprender los componentes fundamentales de Kubernetes, los cuales son:
+
+- Pods
+- Nodes
+- Clusters
+- Deployments
 
 ---
 
-3. **Investigar casos de estudio y explorar la comunidad**
+**Tarea 3. Investigar casos de estudio y explorar la comunidad.**
    
-   - **Investigar casos de estudio** en la sección "Case Studies" del sitio oficial.
-   - **Visitar la sección "Community"** para unirse a foros, explorar eventos y grupos de usuarios.
+Paso 1. Investiga casos de estudio en la sección *"Case Studies"* del sitio oficial.
+
+Paso 2. Visita la sección *"Community"* para unirte a foros, explorar eventos y grupos de usuarios.
 
 ---
 
-4. **Participar en la comunidad**
+**Tarea 4. Participar en la comunidad.**
    
-   - **Unirse a foros o canales de Slack** relacionados con Kubernetes.
-   - **Asistir a eventos** como KubeCon o seminarios web relacionados con Kubernetes.
-   - **Compartir tus aprendizajes** en blogs o con compañeros para contribuir al conocimiento colectivo.
+Paso 1. Únete a foros o canales de *Slack* relacionados con Kubernetes.
+
+Paso 2. Asiste a eventos como *KubeCon* o seminarios web relacionados con Kubernetes.
+
+Paso 3. Comparte tu conocimiento en blogs o con compañeros para contribuir al conocimiento colectivo.
 
 ## Duración aproximada:
 
@@ -68,13 +75,13 @@ A continucación encontraras una lista que resume las actividades a realizar en 
 | **Casos de Estudio**      | Sección que ofrece ejemplos reales de cómo organizaciones han implementado Kubernetes para resolver problemas. Ayuda a comprender su aplicabilidad en diferentes contextos.                                        |
 | **Comunidad Kubernetes**  | Kubernetes tiene una comunidad activa, con foros, grupos locales y eventos como KubeCon. Participar en la comunidad permite aprender de experiencias compartidas y resolver dudas.                                 |
 
-## Instrucciones
+## Instrucciones:
 
 ### Tarea 1. Explorar el sitio oficial de Kubernetes.
 
 Paso 1. Accede al sitio web oficial de Kubernetes: [https://kubernetes.io/](https://kubernetes.io/).
 
-Paso 2. Dedica unos minutos a explorar las secciones más importantes, como:
+Paso 2. Dedica unos minutos para explorar las secciones más importantes, como lo son:
 
 - "Documentation": Revisa guías y documentación oficial.
 - "Blog": Lee artículos y noticias sobre Kubernetes.
@@ -83,17 +90,17 @@ Paso 2. Dedica unos minutos a explorar las secciones más importantes, como:
 
 ### Tarea 2. Leer la documentación básica de Kubernetes.
 
-Paso 1. Lee la sección "What is Kubernetes?" para obtener una comprensión general de los conceptos clave de Kubernetes, como sus beneficios y arquitectura.
+Paso 1. Lee la sección *"What is Kubernetes?"* para obtener una comprensión general de los conceptos clave de Kubernetes, como sus beneficios y arquitectura.
 
-Paso 2. Revisa la "Quick Start Guide" para familiarizarte con los pasos básicos para desplegar un clúster de Kubernetes en un entorno local o en la nube.
+Paso 2. Revisa la *"Quick Start Guide"* para familiarizarte con los pasos básicos para desplegar un clúster de Kubernetes en un entorno local o en la nube.
 
-Paso 3. Explora la sección "Concepts" para aprender sobre los componentes fundamentales de Kubernetes, como Pods, Nodes, Clusters, y Deployments.
+Paso 3. Explora la sección *"Concepts"* para aprender sobre los componentes fundamentales de Kubernetes, como: Pods, Nodes, Clusters y Deployments.
 
 ### Tarea 3. Investigar casos de estudio y explorar la comunidad.
 
-Paso 1. Visita la sección "Case Studies" en el sitio web oficial de Kubernetes y elige al menos un caso de estudio que te interese. Lee cómo Kubernetes ha sido utilizado en diferentes sectores.
+Paso 1. Visita la sección *"Case Studies"* en el sitio web oficial de Kubernetes y elige al menos un caso de estudio que te interese. Lee cómo Kubernetes ha sido utilizado en diferentes sectores.
 
-Paso 2. Dirígete a la sección "Community" y explora los diferentes canales disponibles para interactuar con la comunidad de Kubernetes, como foros, Slack, y eventos como KubeCon + CloudNativeCon.
+Paso 2. Dirígete a la sección *"Community"* y explora los diferentes canales disponibles para interactuar con la comunidad de Kubernetes, como foros, Slack, y eventos como KubeCon + CloudNativeCon.
 
 Paso 3. Investiga diferentes formas de participar en la comunidad, ya sea unirte a un grupo de usuarios local, participar en foros de discusión o asistir a seminarios y meetups.
 
@@ -105,6 +112,6 @@ Paso 2. Asiste a eventos o seminarios web relacionados con Kubernetes para apren
 
 Paso 3. Comparte tus experiencias y aprendizajes clave con tus compañeros o en un blog personal. Documenta tu participación en la comunidad y cómo te ha ayudado a aprender más sobre Kubernetes.
 
-## Resultado esperado
+## Resultado esperado:
 
-El resultado esperado es que tengas una comprensión básica de Kubernetes, sepas cómo acceder a su documentación y cómo interactuar con su comunidad. Además, habrás investigado cómo las organizaciones están utilizando Kubernetes y estarás listo para contribuir al conocimiento colectivo.
+El resultado esperado es que obtengas una comprensión básica de Kubernetes, aprendas cómo acceder a su documentación y cómo interactuar con su comunidad. Además, habrás investigado cómo las organizaciones están utilizando Kubernetes y estarás listo para contribuir al conocimiento colectivo.
