@@ -1,4 +1,4 @@
-# Práctica 5: Implementación y Gestión de un Pod en Kubernetes
+# Práctica 5. Implementación y gestión de un Pod en Kubernetes
 
 ## Objetivo de la práctica
 
@@ -8,7 +8,7 @@ Al finalizar esta práctica, serás capaz de:
 - Implementar y gestionar Pods en Kubernetes.
 - Configurar servicios y aplicar políticas de red básicas.
 
-## Esquema Estructurado de Actividades
+## Objetivo visual:
 
 A continuación, se muestra un esquema textual que describe de manera estructurada las actividades:
 
@@ -36,11 +36,11 @@ Inicio
 Fin
 ```
 
-## Duración aproximada
+## Duración aproximada:
 
 - 60 a 120 minutos.
 
-## Recursos útiles para la práctica
+## Tabla de ayuda:
 
 Esta sección contiene información relevante que puede ser de ayuda durante la práctica:
 
@@ -51,27 +51,27 @@ Esta sección contiene información relevante que puede ser de ayuda durante la 
 | Ejemplo de URL servicio | `http://<node-ip>:30007`                                                        |
 | Salidas de CLI          | Tener presente leer y traducir cualquier salida de comando durante la ejecución |
 
-## Instrucciones
+## Instrucciones:
 
-### Tarea 1: Crear un clúster de Kubernetes
+### Tarea 1: Crear un clúster de Kubernetes.
 
-1. **Usar Minikube:**
+Paso 1. Usa Minikube.
    
    - Verifica que Minikube y docker esté instalado correctamente.
    
-   - Inicia Minikube con el comando:
+   - Inicia Minikube con el siguiente comando:
      
      ```bash
      minikube start
      ```
    
-   - Comprueba los nodos del clúster:
+   - Comprueba los nodos del clúster con el siguiente comando:
      
      ```bash
      kubectl get nodes
      ```
 
-2. **Usar kubeadm:**
+Paso 2. Usa kubeadm.
    
    - Inicializa el clúster en el nodo maestro con el siguiente comando:
      
@@ -87,18 +87,22 @@ Esta sección contiene información relevante que puede ser de ayuda durante la 
      sudo chown $(id -u):$(id -g) $HOME/.kube/config
      ```
 
-### Tarea 2: Añadir nodos al clúster
+---
 
-1. En cada nodo de trabajo, ejecuta el comando de unión proporcionado al inicializar el clúster con kubeadm:
+### Tarea 2. Añadir nodos al clúster.
+
+Paso 1. En cada nodo de trabajo, ejecuta el comando de unión proporcionado al inicializar el clúster con kubeadm:
    
    ```bash
    sudo kubeadm join <master-ip>:<master-port> --token <token> \
      --discovery-token-ca-cert-hash sha256:<hash>
    ```
 
-### Tarea 3: Desplegar una aplicación en Kubernetes
+---
 
-1. **Crear un manifiesto de despliegue:**
+### Tarea 3. Desplegar una aplicación en Kubernetes.
+
+Paso 1. Crea un manifiesto de despliegue.
    
    - Utiliza el siguiente manifiesto YAML para desplegar una aplicación NGINX:
      
@@ -124,15 +128,15 @@ Esta sección contiene información relevante que puede ser de ayuda durante la 
              - containerPort: 80
      ```
 
-2. **Aplicar el manifiesto:**
+Paso 2. Aplicar el manifiesto.
    
    ```bash
    kubectl apply -f nginx-deployment.yaml
    ```
 
-### Tarea 4: Configurar un servicio para acceder a la aplicación
+### Tarea 4. Configurar un servicio para acceder a la aplicación.
 
-1. **Crear el manifiesto del servicio:**
+Paso 1. Crea el manifiesto del servicio.
    
    - Usa el siguiente manifiesto YAML para configurar un servicio NodePort:
      
@@ -152,17 +156,17 @@ Esta sección contiene información relevante que puede ser de ayuda durante la 
            nodePort: 30007
      ```
 
-2. **Aplicar el manifiesto:**
+Paso 2. Aplica el manifiesto.
    
    ```bash
    kubectl apply -f nginx-service.yaml
    ```
 
-3. Accede al servicio desde el navegador usando la IP del nodo y el puerto 30007.
+Paso 3. Accede al servicio desde el navegador usando la IP del nodo y el puerto 30007.
 
-### Tarea 5: Aplicar políticas de red básicas
+### Tarea 5. Aplicar políticas de red básicas.
 
-1. **Crear el manifiesto de la política de red:**
+Paso 1. Crea el manifiesto de la política de red.
    
    - Usa el siguiente manifiesto YAML:
      
@@ -188,19 +192,19 @@ Esta sección contiene información relevante que puede ser de ayuda durante la 
            port: 80
      ```
 
-2. **Aplicar el manifiesto:**
+Paso 2. Aplicar el manifiesto.
    
    ```bash
    kubectl apply -f network-policy.yaml
    ```
 
-## Resultado esperado
+## Resultado esperado:
 
-Al finalizar esta práctica, los estudiantes habrán:
+Al finalizar esta práctica, habrás:
 
 - Creado y configurado un clúster de Kubernetes.
 - Desplegado aplicaciones en contenedores utilizando manifiestos YAML.
 - Configurado servicios NodePort para exponer las aplicaciones.
 - Implementado políticas de red para gestionar el tráfico entre Pods.
 
-Esto permitirá comprender los conceptos fundamentales de la arquitectura de Kubernetes y su administración básica. Es importante aclararles que todos estos conceptos serán abordados en mayor profundidad a lo largo de cada hito del curso 🚀
+Esto permitirá comprender los conceptos fundamentales de la arquitectura de Kubernetes y su administración básica. Es importante aclarar que todos estos conceptos serán abordados en mayor profundidad a lo largo de cada capítulo del curso. 
