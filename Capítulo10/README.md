@@ -1,6 +1,6 @@
-# Práctica 12: Configurar Ingress Controller y reglas de Ingress en Kubernetes
+# Práctica 12. Configurar Ingress Controller y reglas de Ingress en Kubernetes
 
-## Objetivo de la práctica
+## Objetivo de la práctica:
 
 Al finalizar esta práctica, serás capaz de:
 
@@ -8,7 +8,7 @@ Al finalizar esta práctica, serás capaz de:
 - Definir reglas de Ingress para enrutar solicitudes a servicios backend.
 - Gestionar el acceso externo a servicios dentro de un clúster Kubernetes.
 
-## **Resumen de actividades:**
+## Explicación:
 
 1. Instalar el Ingress Controller utilizando el manifiesto proporcionado.
 2. Verificar la instalación del controlador con comandos `kubectl`.
@@ -17,17 +17,11 @@ Al finalizar esta práctica, serás capaz de:
 5. Configurar el archivo `hosts` local para pruebas.
 6. Verificar el acceso al Ingress desde un navegador.
 
----
-
 ## Duración estimada
 
 - 60 minutos.
 
----
-
-## Recursos clave y configuraciones necesarias
-
-### Detalles importantes para el laboratorio:
+## Tabla de ayuda:
 
 | Elemento                 | Descripción                                                                                     |
 | ------------------------ | ----------------------------------------------------------------------------------------------- |
@@ -38,24 +32,25 @@ Al finalizar esta práctica, serás capaz de:
 
 ---
 
-## Instrucciones paso a paso
+## Instrucciones:
 
-### Tarea 1: Instalación del Ingress Controller
+### Tarea 1. Instalación del Ingress Controller.
 
-1. **Descargar e instalar el controlador NGINX:**
+Paso 1. Descarga e instala el controlador NGINX:
    
    ```shell
    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/cloud/deploy.yaml
    ```
-2. **Verificar que los pods del controlador están en ejecución:**
+
+Paso 2. Verifica que los pods del controlador están en ejecución:
    
    ```shell
    kubectl get pods -n ingress-nginx --watch
    ```
 
-### Tarea 2: Crear un servicio y despliegue de ejemplo
+### Tarea 2. Crear un servicio y despliegue de ejemplo.
 
-1. **Crear el archivo `example-deployment.yaml` con el siguiente contenido:**
+Paso 1. Crear el archivo `example-deployment.yaml` con el siguiente contenido:
    
    ```yaml
    apiVersion: apps/v1
@@ -90,15 +85,15 @@ Al finalizar esta práctica, serás capaz de:
        port: 80
        targetPort: 80
    ```
-2. **Aplicar el manifiesto al clúster:**
+Paso 2. Aplica el manifiesto al clúster:
    
    ```shell
    kubectl apply -f example-deployment.yaml
    ```
 
-### Tarea 3: Crear y aplicar un recurso Ingress
+### Tarea 3. Crear y aplicar un recurso Ingress.
 
-1. **Crear el archivo `example-ingress.yaml` con el siguiente contenido:**
+Paso 1. Crear el archivo *`example-ingress.yaml`* con el siguiente contenido:
    
    ```yaml
    apiVersion: networking.k8s.io/v1
@@ -120,32 +115,35 @@ Al finalizar esta práctica, serás capaz de:
                port:
                  number: 80
    ```
-2. **Aplicar el recurso Ingress:**
+Paso 2. Aplica el recurso Ingress:
    
    ```shell
    kubectl apply -f example-ingress.yaml
    ```
 
-### Tarea 4: Configurar el archivo hosts local
+### Tarea 4. Configurar el archivo hosts local.
 
-1. **Abrir el archivo `hosts` en tu sistema operativo:**
+Paso 1. Abre el archivo `hosts` en tu sistema operativo:**
    - En Linux/Mac: `/etc/hosts`.
    - En Windows: `C:\Windows\System32\drivers\etc\hosts`.
-2. **Agregar la siguiente entrada:**
+     
+Paso 2. Agregar la siguiente entrada:
    
    ```
    127.0.0.1 example.local
    ```
 
-### Tarea 5: Verificar el acceso
+### Tarea 5. Verificar el acceso.
 
-1. **Abrir un navegador web.**
-2. **Navegar a `http://example.local`.**
-3. **Confirmar que se muestra la página predeterminada de NGINX.**
+Paso 1. Abrir un navegador web.
+
+Paso 2. Navegar a `http://example.local`.
+
+Paso 3. Confirmar que se muestra la página predeterminada de NGINX.
 
 ---
 
-## Resultado esperado
+## Resultado esperado:
 
 Al finalizar la práctica, deberías haber logrado:
 
@@ -156,11 +154,6 @@ Al finalizar la práctica, deberías haber logrado:
 **Visualización esperada:**
 
 - La página predeterminada de NGINX debería mostrarse en el navegador tras completar los pasos correctamente.
-
----
-
-## Conceptos clave explicados
-
 1. **Ingress Controller:** Es un componente que gestiona el acceso externo a los servicios de Kubernetes basándose en reglas definidas en recursos Ingress.
 2. **Reglas de Ingress:** Permiten enrutar el tráfico a servicios específicos dentro del clúster según el host o la URL.
 3. **Archivo hosts:** Utilizado localmente para mapear nombres de dominio a direcciones IP, esencial en pruebas locales sin DNS.
