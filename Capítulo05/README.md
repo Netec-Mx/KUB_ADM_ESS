@@ -1,4 +1,4 @@
-# Práctica 7 Crear y configurar recursos API
+# Práctica 7. Crear y configurar recursos API
 
 ## Objetivo de la práctica:
 
