@@ -2,6 +2,11 @@
 
 # Curso: Kubernetes Administration and Troubleshooting
 
+## Descripción del curso: 
+
+En este curso, aprenderá sobre la instalación de un clúster de Kubernetes de varios nodos con kubeadm, cómo hacer crecer un clúster, cómo elegir e implementar redes de clúster y varios métodos de administración del ciclo de vida de las aplicaciones, incluidos el escalado, las actualizaciones y las reversiones. El curso también cubre la configuración de la seguridad tanto para el clúster como para los contenedores, la administración del almacenamiento disponible para los contenedores, la supervisión, el registro y la resolución de problemas de los contenedores y el clúster, la configuración de la programación y la afinidad de las implementaciones de contenedores, el uso de Helm y Charts para automatizar la implementación de aplicaciones y la comprensión de la federación para la tolerancia a fallas y una mayor disponibilidad.
+
+
 ## Índice:
 
 - [Práctica 1. Explorando Kubernetes.](./Capítulo01_Práctica1/README.md)
