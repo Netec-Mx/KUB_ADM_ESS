@@ -151,7 +151,7 @@ Al finalizar la práctica, deberías haber logrado:
 - Implementar reglas de Ingress para enrutar el tráfico.
 - Acceder exitosamente al servicio backend a través de la URL `http://example.local`.
 
-**Visualización esperada:**
+### Visualización esperada:
 
 - La página predeterminada de NGINX debería mostrarse en el navegador tras completar los pasos correctamente.
 1. **Ingress Controller:** Es un componente que gestiona el acceso externo a los servicios de Kubernetes basándose en reglas definidas en recursos Ingress.
