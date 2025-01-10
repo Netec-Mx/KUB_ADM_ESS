@@ -1,4 +1,4 @@
-# Práctica 10: Implementación de volúmenes persistentes
+# Práctica 10. Implementación de volúmenes persistentes
 
 ## Objetivo de la práctica:
 
@@ -8,7 +8,7 @@ Al finalizar la práctica, serás capaz de:
 - Desplegar Pods que usen almacenamiento persistente.
 - Utilizar ConfigMaps para gestionar configuraciones en Kubernetes.
 
-## Representación del flujo de trabajo
+## Objetivo visual:
 
 A continuación, se muestra un resumen textual y estructurado de las actividades a realizar:
 
@@ -36,9 +36,7 @@ A continuación, se muestra un resumen textual y estructurado de las actividades
 
 - 60 minutos.
 
-## Guía práctica y de referencia
-
-**Información clave para completar la práctica:**
+## Tabla de ayuda:
 
 | Elemento                              | Detalle                                                                                                 |
 | ------------------------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -51,11 +49,11 @@ A continuación, se muestra un resumen textual y estructurado de las actividades
 
 ---
 
-## Instrucciones
+## Instrucciones:
 
-### **Tarea 1. Configurar un PersistentVolume (PV)**
+### **Tarea 1. Configurar un PersistentVolume (PV).**
 
-1. Crea un archivo llamado `persistent-volume.yaml` con el siguiente contenido:
+Paso 1. Crea un archivo llamado `persistent-volume.yaml` con el siguiente contenido:
    
    ```yaml
    apiVersion: v1
@@ -73,21 +71,21 @@ A continuación, se muestra un resumen textual y estructurado de las actividades
        path: "/mnt/data"
    ```
 
-2. Aplica el archivo con el comando:
+Paso 2. Aplica el archivo con el comando:
    
    ```bash
    kubectl apply -f persistent-volume.yaml
    ```
 
-3. Verifica que el PV se haya creado correctamente:
+Paso 3. Verifica que el PV se haya creado correctamente:
    
    ```bash
    kubectl get pv
    ```
 
-### **Tarea 2. Configurar un PersistentVolumeClaim (PVC)**
+### **Tarea 2. Configurar un PersistentVolumeClaim (PVC)**.
 
-1. Crea un archivo llamado `persistent-volume-claim.yaml` con el siguiente contenido:
+Paso 1. Crea un archivo llamado `persistent-volume-claim.yaml` con el siguiente contenido:
    
    ```yaml
    apiVersion: v1
@@ -103,13 +101,13 @@ A continuación, se muestra un resumen textual y estructurado de las actividades
      storageClassName: manual
    ```
 
-2. Aplica el archivo con el comando:
+Paso 2. Aplica el archivo con el comando:
    
    ```bash
    kubectl apply -f persistent-volume-claim.yaml
    ```
 
-3. Verifica que el PVC se haya vinculado al PV:
+Paso 3. Verifica que el PVC se haya vinculado al PV:
    
    ```bash
    kubectl get pvc
@@ -117,7 +115,7 @@ A continuación, se muestra un resumen textual y estructurado de las actividades
 
 ### **Tarea 3. Desplegar un Pod que utilice almacenamiento persistente**
 
-1. Crea un archivo llamado `nginx-pod-pvc.yaml` con el siguiente contenido:
+Paso 1. Crea un archivo llamado `nginx-pod-pvc.yaml` con el siguiente contenido:
    
    ```yaml
    apiVersion: v1
@@ -137,40 +135,40 @@ A continuación, se muestra un resumen textual y estructurado de las actividades
          claimName: pvc0001
    ```
 
-2. Aplica el archivo con el comando:
+Paso 2. Aplica el archivo con el comando:
    
    ```bash
    kubectl apply -f nginx-pod-pvc.yaml
    ```
 
-3. Verifica que el Pod esté en ejecución:
+Paso 3. Verifica que el Pod esté en ejecución:
    
    ```bash
    kubectl get pods
    ```
 
-4. Accede al Pod y verifica el montaje del volumen:
+Paso 4. Accede al Pod y verifica el montaje del volumen:
    
    ```bash
    kubectl exec -it nginx-pod -- /bin/sh
    ```
    
-   Dentro del shell del contenedor, navega al directorio `/usr/share/nginx/html` y lista los archivos:
+Paso 5. Dentro del shell del contenedor, navega al directorio `/usr/share/nginx/html` y lista los archivos:
    
    ```bash
    cd /usr/share/nginx/html
    ls -l
    ```
 
-### **Tarea 4. Incorporar un ConfigMap al Pod**
+### **Tarea 4. Incorporar un ConfigMap al Pod**.
 
-1. Crea un ConfigMap que contenga configuraciones específicas:
+Paso 1. Crea un ConfigMap que contenga configuraciones específicas:
    
    ```bash
    kubectl create configmap nginx-config --from-literal=index.html="<h1>¡Hola, Kubernetes!</h1>"
    ```
 
-2. Modifica el archivo del Pod para incluir el ConfigMap como un volumen adicional. Guarda el archivo como `nginx-pod-pvc-configmap.yaml`:
+Paso 2. Modifica el archivo del Pod para incluir el ConfigMap como un volumen adicional. Guarda el archivo como `nginx-pod-pvc-configmap.yaml`:
    
    ```yaml
    apiVersion: v1
@@ -196,19 +194,19 @@ A continuación, se muestra un resumen textual y estructurado de las actividades
          name: nginx-config
    ```
 
-3. Aplica el archivo actualizado:
+Paso 3. Aplica el archivo actualizado:
    
    ```bash
    kubectl apply -f nginx-pod-pvc-configmap.yaml
    ```
 
-4. Verifica que el ConfigMap se haya aplicado correctamente:
+Paso 4. Verifica que el ConfigMap se haya aplicado correctamente:
    
    ```bash
    kubectl exec -it nginx-pod -- /bin/sh
    ```
    
-   Revisa el contenido del directorio de configuraciones:
+Paso 5. Revisa el contenido del directorio de configuraciones:
    
    ```bash
    ls /etc/nginx/conf.d
@@ -216,7 +214,7 @@ A continuación, se muestra un resumen textual y estructurado de las actividades
 
 ---
 
-## Resultado esperado
+## Resultado esperado:
 
 - El Pod debería estar configurado para usar almacenamiento persistente desde el PVC.
 - La configuración del ConfigMap debería ser accesible dentro del contenedor.
