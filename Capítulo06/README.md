@@ -1,12 +1,14 @@
-# Práctica 8: Implementación de DaemonSets y uso de etiquetas
+# Práctica 8. Implementación de DaemonSets y uso de etiquetas
 
-## Objetivo de la práctica
+## Objetivo de la práctica:
+
 Al finalizar esta práctica, serás capaz de:
+
 - Implementar DaemonSets en Kubernetes para desplegar Pods en cada nodo del clúster.
 - Utilizar etiquetas para organizar y administrar Pods de manera eficiente.
 - Escalar el clúster y verificar la actualización automática de DaemonSets en nuevos nodos.
 
-## Explicación ilustrativa
+## Explicación:
 En esta práctica, aprenderemos a desplegar DaemonSets y a utilizar etiquetas para clasificar y gestionar Pods. Las etiquetas son útiles para filtrar, organizar y aplicar configuraciones específicas a subconjuntos de Pods.
 
 | Concepto clave | Descripción |
@@ -23,7 +25,8 @@ En esta práctica, aprenderemos a desplegar DaemonSets y a utilizar etiquetas pa
 ## Duración estimada:
 - 60 minutos.
 
-## Ayuda para la práctica: Recursos y contexto
+## Tabla de ayuda:
+
 | Elemento | Descripción |
 | --- | --- |
 | **Archivo YAML** | El manifiesto para definir y gestionar DaemonSets. |
@@ -34,12 +37,14 @@ En esta práctica, aprenderemos a desplegar DaemonSets y a utilizar etiquetas pa
 
 ---
 
-## Instrucciones detalladas
+## Instrucciones_
 
-### Tarea 1: Crear un DaemonSet básico
-#### Paso 1: Escribir el manifiesto YAML para el DaemonSet
-1. Abrir un editor de texto de tu elección y crear un archivo llamado `nginx-daemonset.yaml`.
-2. Añadir el siguiente contenido al archivo:
+### Tarea 1. Crear un DaemonSet básico.
+
+Paso 1. Escribe el manifiesto YAML para el DaemonSet.
+
+1. Abre un editor de texto de tu elección y crear un archivo llamado `nginx-daemonset.yaml`.
+2. Añade el siguiente contenido al archivo:
 
 ```yaml
 apiVersion: apps/v1
@@ -64,15 +69,18 @@ spec:
 ```
 > **Nota**: Este manifiesto define un DaemonSet que ejecutará un contenedor Nginx en todos los nodos del clúster.
 
-#### Paso 2: Aplicar el archivo YAML
-- Utilizar el siguiente comando para implementar el DaemonSet en el clúster:
+Paso 2. Aplica el archivo YAML.
 
-```bash
+1. Utiliza el siguiente comando para implementar el DaemonSet en el clúster:
+
+```
+bash
 kubectl apply -f nginx-daemonset.yaml
 ```
 
-#### Paso 3: Verificar la creación de Pods
-- Verificar que los Pods se han desplegado en cada nodo:
+Paso 3. Verifica la creación de Pods.
+
+1. Verifica que los Pods se han desplegado en cada nodo:
 
 ```bash
 kubectl get pods -o wide
@@ -80,16 +88,19 @@ kubectl get pods -o wide
 
 ---
 
-### Tarea 2: Agregar y gestionar etiquetas
-#### Paso 1: Verificar las etiquetas de los Pods
-- Ejecutar el siguiente comando para listar los Pods con etiquetas:
+### Tarea 2. Agregar y gestionar etiquetas.
+
+Paso 1. Verificar las etiquetas de los Pods.
+
+1. Ejecuta el siguiente comando para listar los Pods con etiquetas:
 
 ```bash
 kubectl get pods --show-labels
 ```
 
-#### Paso 2: Modificar etiquetas existentes (si es necesario)
-- Para agregar o actualizar una etiqueta en un Pod específico, utiliza el siguiente comando:
+Paso 2. Modifica las etiquetas existentes (si es necesario).
+
+1. Para agregar o actualizar una etiqueta en un Pod específico, utiliza el siguiente comando:
 
 ```bash
 kubectl label pods <pod-name> role=logging --overwrite
@@ -98,16 +109,19 @@ kubectl label pods <pod-name> role=logging --overwrite
 
 ---
 
-### Tarea 3: Escalar el clúster y observar el comportamiento de DaemonSets
-#### Paso 1: Escalar el clúster
-- Si estás usando Minikube, puedes agregar un nodo adicional con el siguiente comando:
+### Tarea 3. Escalar el clúster y observar el comportamiento de DaemonSets.
+
+Paso 1. Escala el clúster.
+
+1. Si estás usando Minikube, puedes agregar un nodo adicional con el siguiente comando:
 
 ```bash
 minikube node add
 ```
 
-#### Paso 2: Verificar la propagación del DaemonSet
-- Confirmar que los Pods del DaemonSet se han desplegado en los nuevos nodos:
+Paso 2. Verifica la propagación del DaemonSet.
+
+1. Confirmar que los Pods del DaemonSet se han desplegado en los nuevos nodos:
 
 ```bash
 kubectl get pods -o wide
@@ -115,21 +129,23 @@ kubectl get pods -o wide
 
 ---
 
-## Resultado esperado
+## Resultado esperado:
+
 Al finalizar esta práctica, deberás haber logrado:
+
 - Crear un DaemonSet que implemente Nginx en todos los nodos.
 - Utilizar etiquetas para identificar y organizar Pods.
 - Observar cómo los DaemonSets se actualizan automáticamente al escalar el clúster.
 
 ---
 
-## Notas y aclaraciones
+## Notas y aclaraciones:
 - Un **DaemonSet** asegura que un Pod se ejecute en cada nodo del clúster. Esto es útil para tareas como la recopilación de registros o la implementación de aplicaciones críticas.
 - Las **etiquetas** son esenciales para administrar objetos en Kubernetes de manera eficiente. Ayudan a filtrar y aplicar configuraciones específicas.
 - La escalabilidad de los DaemonSets garantiza que se adapten automáticamente a los cambios en la infraestructura del clúster.
 
 ---
 
-## Consideraciones finales
+## Consideraciones finales:
 - Familiarízate con los comandos de `kubectl` utilizados en esta práctica, ya que son esenciales para administrar Kubernetes.
 - Consulta la [documentación oficial](https://kubernetes.io/docs/home/) para obtener más detalles y mejores prácticas sobre DaemonSets y etiquetas.
