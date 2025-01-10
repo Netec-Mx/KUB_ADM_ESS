@@ -1,4 +1,4 @@
-# Práctica 11: Configuración y acceso a servicios en Kubernetes
+# Práctica 11. Configuración y acceso a servicios en Kubernetes
 
 ## Objetivo de la práctica:
 
@@ -8,7 +8,7 @@ Al finalizar la práctica, serás capaz de:
 - Comprender el propósito de los servicios ClusterIP, NodePort y LoadBalancer.
 - Validar la conectividad y funcionalidad de los servicios configurados.
 
-## Explicación del Proceso
+## Explicación:
 
 A continuación, se presenta una representación textual del flujo de actividades:
 
@@ -32,7 +32,7 @@ A continuación, se presenta una representación textual del flujo de actividade
 
 - 60 minutos.
 
-## Guía de apoyo detallada
+## Tabla de ayuda:
 
 Esta sección proporciona información adicional que será útil durante el laboratorio:
 
@@ -43,11 +43,11 @@ Esta sección proporciona información adicional que será útil durante el labo
 | Credenciales necesarias    | Acceso como administrador al clúster para aplicar configuraciones.     |
 | Configuración previa       | Asegúrate de que tu clúster tiene nodos listos y recursos suficientes. |
 
-## Instrucciones
+## Instrucciones:
 
-### Tarea 1. Configurar un servicio ClusterIP
+### Tarea 1. Configurar un servicio ClusterIP.
 
-1. Crear el archivo YAML con la siguiente configuración:
+Paso 1. Crear el archivo YAML con la siguiente configuración:
 
 ```yaml
 apiVersion: v1
@@ -63,20 +63,20 @@ spec:
       targetPort: 9376
 ```
 
-2. Aplicar el archivo YAML:
+Paso 2. Aplicar el archivo YAML:
    
    ```bash
    kubectl apply -f my-service-clusterip.yaml
    ```
-3. Verificar la creación del servicio:
+Paso 3. Verificar la creación del servicio:
    
    ```bash
    kubectl get services
    ```
 
-### Tarea 2. Exponer el servicio como NodePort
+### Tarea 2. Exponer el servicio como NodePort.
 
-1. Modificar el archivo YAML para incluir el tipo `NodePort`:
+Paso 1. Modificar el archivo YAML para incluir el tipo `NodePort`:
 
 ```yaml
 apiVersion: v1
@@ -93,20 +93,20 @@ spec:
       nodePort: 30007
 ```
 
-2. Aplicar el archivo YAML:
+Paso 2. Aplicar el archivo YAML:
    
    ```bash
    kubectl apply -f my-service-nodeport.yaml
    ```
-3. Probar el acceso desde la IP de un nodo:
+Paso 3. Probar el acceso desde la IP de un nodo:
    
    ```bash
    curl http://<node-ip>:30007
    ```
 
-### Tarea 3. Configurar un servicio LoadBalancer
+### Tarea 3. Configurar un servicio LoadBalancer.
 
-1. Modificar el archivo YAML para incluir el tipo `LoadBalancer`:
+Paso 1. Modificar el archivo YAML para incluir el tipo `LoadBalancer`:
 
 ```yaml
 apiVersion: v1
@@ -122,23 +122,23 @@ spec:
       targetPort: 9376
 ```
 
-2. Aplicar el archivo YAML:
+Paso 2. Aplicar el archivo YAML:
    
    ```bash
    kubectl apply -f my-service-loadbalancer.yaml
    ```
-3. Verificar la IP asignada al balanceador de carga:
+Paso 3. Verificar la IP asignada al balanceador de carga:
    
    ```bash
    kubectl get services
    ```
-4. Probar el acceso desde la IP externa asignada:
+Paso 4. Probar el acceso desde la IP externa asignada:
    
    ```bash
    curl http://<external-ip>
    ```
 
-### Resultado esperado
+### Resultado esperado:
 
 Al finalizar la práctica, debes haber logrado:
 
@@ -146,7 +146,7 @@ Al finalizar la práctica, debes haber logrado:
 - Configurar y validar un servicio NodePort, accesible desde la IP del nodo y puerto especificado.
 - Configurar y validar un servicio LoadBalancer, accesible desde una IP externa asignada.
 
-## Notas adicionales
+## Notas adicionales:
 
 - Asegúrate de eliminar los servicios creados después de la práctica si ya no son necesarios:
   
