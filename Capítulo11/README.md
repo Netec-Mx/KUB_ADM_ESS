@@ -1,4 +1,4 @@
-# Práctica 13: Configuración y Gestión del Scheduler en Kubernetes
+# Práctica 13. Configuración y Gestión del Scheduler en Kubernetes
 
 ## Objetivos de la práctica
 
@@ -9,56 +9,56 @@ Al finalizar esta práctica, serás capaz de:
 - Aplicar reglas de afinidad para optimizar el posicionamiento de Pods en los nodos.
 - Gestionar taints y tolerations para controlar la ubicación de los Pods en el clúster.
 
-## Actividad generalizada
+## Explicación:
 
 A continuación, se incluye una descripción organizada de las actividades de la práctica:
 
-1. **Configuración del Scheduler**:
+1. Configuración del Scheduler:
    - Modificación de parámetros mediante archivos YAML.
    - Uso de plugins para personalizar el Scheduler.
-2. **Especificación de Pods**:
+2. Especificación de Pods:
    - Definición de recursos mínimos y máximos para contenedores.
    - Configuración de volúmenes persistentes.
-3. **Reglas de Afinidad**:
+3. Reglas de Afinidad:
    - Uso de nodeAffinity para limitar el posicionamiento de Pods en nodos específicos.
    - Configuración de afinidad mediante operadores como `In` y `NotIn`.
-4. **Taints y Tolerations**:
+4. Taints y Tolerations:
    - Adición de taints a nodos específicos para restringir la asignación.
    - Uso de tolerations en Pods para permitir excepciones.
 
-| **Sección**        | **Descripción**                                                                     |
+| Sección        | Descripción                                                                     |
 | ------------------ | ----------------------------------------------------------------------------------- |
 | Scheduler          | Configuración avanzada con plugins y parámetros personalizados.                     |
 | Pods               | Definición de recursos, volúmenes y configuraciones avanzadas como init containers. |
 | Node Affinity      | Reglas para la ubicación óptima de los Pods en los nodos.                           |
 | Taints/Tolerations | Restricción y control de ubicación mediante políticas de tolerancia.                |
 
-## Duración aproximada
+## Duración aproximada:
 
 - 60 minutos.
 
-## Detalles técnicos y ayuda contextual
+## Tabla de ayuda:
 
 Esta sección proporciona información útil para realizar la práctica:
 
-| **Elemento**                | **Explicación**                                                                                         |
+| Elemento                | Explicación                                                                                         |
 | --------------------------- | ------------------------------------------------------------------------------------------------------- |
-| **Versión de Kubernetes**   | Asegúrate de usar una versión compatible con Node Affinity y tolerations (recomendado 1.22 o superior). |
-| **Configuración de Pods**   | Incluye siempre especificaciones como recursos solicitados (CPU, memoria) y límites.                    |
-| **Nodo reservado**          | Para pruebas con taints, selecciona un nodo que no esté crítico en el clúster.                          |
-| **Herramientas necesarias** | kubectl instalado y configurado correctamente para interactuar con el clúster.                          |
+| Versión de Kubernetes   | Asegúrate de usar una versión compatible con Node Affinity y tolerations (recomendado 1.22 o superior). |
+| Configuración de Pods   | Incluye siempre especificaciones como recursos solicitados (CPU, memoria) y límites.                    |
+| Nodo reservado          | Para pruebas con taints, selecciona un nodo que no esté crítico en el clúster.                          |
+| Herramientas necesarias | kubectl instalado y configurado correctamente para interactuar con el clúster.                          |
 
-## Instrucciones
+## Instrucciones:
 
-### Tarea 1. Configurar el Scheduler
+### Tarea 1. Configurar el Scheduler.
 
-1. **Revisar la configuración actual del Scheduler**:
+Paso 1. Revisa la configuración actual del Scheduler:
    
    ```bash
    kubectl get componentstatuses
    ```
 
-2. **Crear o modificar un archivo YAML para personalizar el Scheduler**:
+Paso 2. Crea o modifica un archivo YAML para personalizar el Scheduler:
    
    ```yaml
    apiVersion: kubescheduler.config.k8s.io/v1
@@ -67,15 +67,15 @@ Esta sección proporciona información útil para realizar la práctica:
      leaderElect: true
    ```
 
-3. **Aplicar la configuración personalizada**:
+Paso 3. Aplica la configuración personalizada:
    
    ```bash
    kubectl apply -f scheduler-config.yaml
    ```
 
-### Tarea 2. Especificar un Pod
+### Tarea 2. Especificar un Pod.
 
-1. **Crear un archivo YAML para definir un Pod**:
+Paso 1. Crea un archivo YAML para definir un Pod:
    
    ```yaml
    apiVersion: v1
@@ -95,15 +95,15 @@ Esta sección proporciona información útil para realizar la práctica:
            cpu: "500m"
    ```
 
-2. **Aplicar la especificación del Pod**:
+Paso 2. Aplica la especificación del Pod:
    
    ```bash
    kubectl apply -f pod-definition.yaml
    ```
 
-### Tarea 3. Aplicar Node Affinity
+### Tarea 3. Aplicar Node Affinity.
 
-1. **Crear un archivo YAML para Node Affinity**:
+Paso 1. Crea un archivo YAML para Node Affinity:
    
    ```yaml
    affinity:
@@ -118,21 +118,21 @@ Esta sección proporciona información útil para realizar la práctica:
              - e2e-az2
    ```
 
-2. **Aplicar el archivo de configuración**:
+Paso 2. Aplica el archivo de configuración:
    
    ```bash
    kubectl apply -f affinity-config.yaml
    ```
 
-### Tarea 4. Configurar Taints y Tolerations
+### Tarea 4. Configurar Taints y Tolerations.
 
-1. **Agregar un taint a un nodo**:
+Paso 1. Agrega un taint a un nodo:
    
    ```bash
    kubectl taint nodes nodename key=value:NoSchedule
    ```
 
-2. **Definir tolerations en el Pod**:
+Paso 2. Define tolerations en el Pod:
    
    ```yaml
    tolerations:
@@ -142,20 +142,20 @@ Esta sección proporciona información útil para realizar la práctica:
      effect: "NoSchedule"
    ```
 
-3. **Aplicar las configuraciones**:
+Paso 3. Aplica las configuraciones:
    
    ```bash
    kubectl apply -f pod-tolerations.yaml
    ```
 
-### Resultado esperado
+### Resultado esperado:
 
 - Scheduler configurado correctamente con parámetros personalizados.
 - Pods definidos con configuraciones avanzadas.
 - Reglas de afinidad aplicadas, posicionando Pods de forma óptima en los nodos.
 - Taints y tolerations gestionados adecuadamente, controlando la asignación de Pods en el clúster.
 
-| **Resultados clave** | **Descripción**                                            |
+| Resultados clave | Descripción                                            |
 | -------------------- | ---------------------------------------------------------- |
 | Scheduler            | Personalización aplicada con éxito.                        |
 | Pods                 | Configurados con especificaciones avanzadas.               |
@@ -164,7 +164,7 @@ Esta sección proporciona información útil para realizar la práctica:
 
 ## Aclaraciones y conceptos útiles
 
-- **Node Affinity**: Permite definir reglas que controlan en qué nodos pueden ejecutarse los Pods.
-- **Taints**: Restringen la asignación de Pods a nodos específicos.
-- **Tolerations**: Permiten que ciertos Pods puedan superar las restricciones impuestas por taints.
-- **Scheduler**: Es el componente de Kubernetes responsable de asignar Pods a nodos específicos según reglas y configuraciones predefinidas.
+- Node Affinity: Permite definir reglas que controlan en qué nodos pueden ejecutarse los Pods.
+- Taints: Restringen la asignación de Pods a nodos específicos.
+- Tolerations: Permiten que ciertos Pods puedan superar las restricciones impuestas por taints.
+- Scheduler: Es el componente de Kubernetes responsable de asignar Pods a nodos específicos según reglas y configuraciones predefinidas.
