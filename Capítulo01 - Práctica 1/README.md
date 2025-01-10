@@ -1,4 +1,4 @@
-# Práctica 1: Explorando Kubernetes
+# Práctica 1. Explorando Kubernetes
 
 ## Objetivo de la práctica:
 
