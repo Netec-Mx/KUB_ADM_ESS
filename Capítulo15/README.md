@@ -1,4 +1,4 @@
-# Práctica 17: Implementación de alta disponibilidad en Kubernetes
+# Práctica 17. Implementación de alta disponibilidad en Kubernetes
 
 ## Objetivo de la práctica:
 
@@ -8,15 +8,11 @@ Al finalizar la práctica, serás capaz de:
 - Implementar una base de datos apilada (Stacked Database) y una base de datos externa (External Database) en Kubernetes.
 - Verificar la conectividad y realizar pruebas de rendimiento, fallo y recuperación en el sistema.
 
-## Actividades a realizar
-
-### Duración aproximada:
+## Duración aproximada:
 
 - 120 minutos.
 
-### Tabla de ayuda:
-
-Aquí se encuentra información esencial para realizar las configuraciones necesarias durante la práctica:
+## Tabla de ayuda:
 
 | Elemento                   | Descripción                                                                                                                                                                        |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,15 +23,15 @@ Aquí se encuentra información esencial para realizar las configuraciones neces
 
 ---
 
-## Instrucciones
+## Instrucciones:
 
-### Tarea 1. Configuración de Stacked Database
+### Tarea 1. Configuración de Stacked Database.
 
-Paso 1. Instalar etcd en los mismos nodos que otros componentes de Kubernetes.
+Paso 1. Instala etcd en los mismos nodos que otros componentes de Kubernetes.
 
 - Descarga e instala etcd en los nodos seleccionados del clúster.
 
-Paso 2. Configurar el archivo de configuración de etcd para los nodos del clúster.
+Paso 2. Configura el archivo de configuración de etcd para los nodos del clúster.
 
 ```bash
 etcd --name infra0 --data-dir /var/lib/etcd --initial-advertise-peer-urls http://<ip-0>:2380 \
@@ -47,7 +43,7 @@ etcd --name infra0 --data-dir /var/lib/etcd --initial-advertise-peer-urls http:/
 
 **Explicación**: Este comando configura un etcd de ejemplo en un nodo específico, definiendo sus puertos de comunicación con otros nodos en el clúster. Es fundamental asegurar que las IPs de los nodos sean correctas y validar los parametros del comando de acuerdo a tu entorno y la versión de k8s.
 
-Paso 3. Verificar que la configuración sea exitosa.
+Paso 3. Verifica que la configuración sea exitosa.
 
 ```bash
 etcdctl cluster-health
@@ -55,13 +51,13 @@ etcdctl cluster-health
 
 ---
 
-### Tarea 2. Implementación de External Database
+### Tarea 2. Implementación de External Database.
 
-Paso 1. Desplegar etcd en nodos dedicados fuera del clúster principal.
+Paso 1. Despliega etcd en nodos dedicados fuera del clúster principal.
 
 - Utiliza nodos dedicados que no forman parte de los nodos principales del clúster de Kubernetes para instalar etcd.
 
-Paso 2. Configurar la conectividad entre los nodos y la red para asegurar la comunicación entre etcd y los componentes de Kubernetes.
+Paso 2. Configura la conectividad entre los nodos y la red para asegurar la comunicación entre etcd y los componentes de Kubernetes.
 
 ```yaml
 apiVersion: v1
@@ -82,7 +78,7 @@ data:
 
 **Explicación**: En este caso, los nodos etcd están fuera del clúster principal de Kubernetes. Asegúrate de que las IPs externas sean accesibles y configuradas correctamente.
 
-Paso 3. Verificar la conectividad y configuración de los nodos etcd.
+Paso 3. Verifica la conectividad y configuración de los nodos etcd.
 
 ```bash
 etcdctl cluster-health
@@ -90,7 +86,7 @@ etcdctl cluster-health
 
 ---
 
-### Verificación y pruebas
+### Verificación y pruebas:
 
 - **Verificar la conectividad**: Asegúrate de que todos los componentes de Kubernetes (API Server, Controller Manager, Scheduler) puedan conectarse correctamente con etcd.
 - **Pruebas de incidencias y recuperación**: Simula un fallo en uno de los nodos etcd y verifica que el sistema sea capaz de recuperarse automáticamente y mantener la alta disponibilidad.
