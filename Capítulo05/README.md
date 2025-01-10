@@ -1,6 +1,7 @@
-# Práctica 7: Crear y configurar recursos API
+# Práctica 7 Crear y configurar recursos API
 
-## Objetivo de la práctica
+## Objetivo de la práctica:
+
 Al finalizar esta práctica, serás capaz de:
 
 - Implementar recursos API básicos en un clúster de Kubernetes.
@@ -9,7 +10,7 @@ Al finalizar esta práctica, serás capaz de:
 
 ---
 
-## Representación de las actividades
+## Objetivo visual:
 
 En esta sección se presenta un esquema textual que ilustra las actividades a realizar durante la práctica:
 
@@ -31,13 +32,13 @@ En esta sección se presenta un esquema textual que ilustra las actividades a re
 
 ---
 
-## Duración aproximada
+## Duración aproximada:
 
 - **60 minutos.**
 
 ---
 
-## Guía de consulta para la práctica
+## Tabla de ayuda:
 
 Información clave para completar las tareas:
 
@@ -50,11 +51,11 @@ Información clave para completar las tareas:
 
 ---
 
-## Instrucciones
+## Instrucciones:
 
-### Tarea 1. Crear un Pod
+### Tarea 1. Crear un Pod.
 
-1. Define un manifiesto YAML llamado `nginx-pod.yaml` con el siguiente contenido:
+Paso 1. Define un manifiesto YAML llamado `nginx-pod.yaml` con el siguiente contenido:
 
     ```yaml
     apiVersion: v1
@@ -71,15 +72,15 @@ Información clave para completar las tareas:
         - containerPort: 80
     ```
 
-2. Aplica el manifiesto YAML para crear el Pod en Kubernetes:
+Paso 2. Aplica el manifiesto YAML para crear el Pod en Kubernetes:
 
     ```bash
     kubectl apply -f nginx-pod.yaml
     ```
 
-### Tarea 2. Crear un Servicio para exponer el Pod
+### Tarea 2. Crear un Servicio para exponer el Pod.
 
-1. Define un manifiesto YAML llamado `nginx-service.yaml` con el siguiente contenido:
+Paso 1. Define un manifiesto YAML llamado `nginx-service.yaml` con el siguiente contenido:
 
     ```yaml
     apiVersion: v1
@@ -97,15 +98,15 @@ Información clave para completar las tareas:
           nodePort: 30007
     ```
 
-2. Aplica el manifiesto YAML para crear el Servicio:
+Paso 2. Aplica el manifiesto YAML para crear el Servicio:
 
     ```bash
     kubectl apply -f nginx-service.yaml
     ```
 
-### Tarea 3. Configurar permisos RBAC
+### Tarea 3. Configurar permisos RBAC.
 
-1. Define un Role en un archivo YAML llamado `read-pods-role.yaml` con el siguiente contenido:
+Paso 1. Define un Role en un archivo YAML llamado `read-pods-role.yaml` con el siguiente contenido:
 
     ```yaml
     apiVersion: rbac.authorization.k8s.io/v1
@@ -119,7 +120,7 @@ Información clave para completar las tareas:
       verbs: ["get", "watch", "list"]
     ```
 
-2. Define un RoleBinding en un archivo YAML llamado `read-pods-rolebinding.yaml` con el siguiente contenido:
+Paso 2. Define un RoleBinding en un archivo YAML llamado `read-pods-rolebinding.yaml` con el siguiente contenido:
 
     ```yaml
     apiVersion: rbac.authorization.k8s.io/v1
@@ -137,23 +138,23 @@ Información clave para completar las tareas:
       apiGroup: rbac.authorization.k8s.io
     ```
 
-3. Aplica los manifiestos YAML para crear el Role y el RoleBinding:
+Paso 3. Aplica los manifiestos YAML para crear el Role y el RoleBinding:
 
     ```bash
     kubectl apply -f read-pods-role.yaml
     kubectl apply -f read-pods-rolebinding.yaml
     ```
 
-### Tarea 4. Verificación de la configuración
+### Tarea 4. Verificación de la configuración.
 
-1. Verifica que el Pod y el Servicio estén configurados correctamente:
+Paso 1. Verifica que el Pod y el Servicio estén configurados correctamente:
 
     ```bash
     kubectl get pods
     kubectl get svc
     ```
 
-2. Valida los permisos del usuario `jane`:
+Paso 2. Valida los permisos del usuario `jane`:
 
     ```bash
     kubectl auth can-i get pods --as=jane
@@ -161,7 +162,7 @@ Información clave para completar las tareas:
 
 ---
 
-## Resultado esperado
+## Resultado esperado:
 
 Al finalizar esta práctica, deberás haber:
 
