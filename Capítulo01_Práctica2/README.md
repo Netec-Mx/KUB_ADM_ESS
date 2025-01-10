@@ -1,4 +1,4 @@
-# Práctica 2. Repositorio Oficial de Kubernetes
+# Práctica 2. Repositorio oficial de Kubernetes
 
 ## Objetivo de la práctica
 
