@@ -1,4 +1,4 @@
-# Configuración y gestión de Pod en Kubernetes
+# Práctica 6. Configuración y gestión de Pod en Kubernetes
 
 ## Objetivo de la práctica:
 
@@ -9,7 +9,7 @@ Al finalizar esta práctica, serás capaz de:
 - Utilizar Annotations para agregar metadatos a los Pods.
 - Verificar el estado de los Pods en un clúster Kubernetes.
 
-## Elementos a visualizar:
+## Objetivo visual:
 
 Aquí tendremos la creación del archivo YAML, la aplicación del Pod, los logs, la adición de anotaciones y la eliminación del Pod. Con comandos y sus respectivos resultados esperados.
 
@@ -19,7 +19,7 @@ Aquí tendremos la creación del archivo YAML, la aplicación del Pod, los logs,
 
 - 60 minutos.
 
-## Información útil para la práctica:
+## Tabla de ayuda:
 
 A continuación, se presenta una tabla con detalles útiles para la práctica, como los comandos más utilizados, IPs y versiones de software, que pueden ser necesarios durante la realización de la práctica.
 
@@ -32,9 +32,9 @@ A continuación, se presenta una tabla con detalles útiles para la práctica, c
 | **Credenciales**          | Asegúrate de tener acceso a kubectl con privilegios necesarios. |
 | **Logs del Pod**          | Uso de `kubectl logs <pod-name>` para ver los logs del Pod.     |
 
-## Instrucciones
+## Instrucciones:
 
-### Tarea 1: Crear un Pod básico en Kubernetes
+### Tarea 1: Crear un Pod básico en Kubernetes.
 
 Paso 1. **Crear un archivo YAML** que defina un Pod con el contenedor Nginx. El archivo debe llamarse `nginx-pod.yaml` y debe contener la siguiente estructura:
 
@@ -53,47 +53,47 @@ spec:
     - containerPort: 80
 ```
 
-Paso 2. **Aplicar el archivo YAML** usando el siguiente comando:
+Paso 2. **Aplica el archivo YAML** usando el siguiente comando:
 
 ```bash
 kubectl apply -f nginx-pod.yaml
 ```
 
-Paso 3. **Verificar el estado del Pod** ejecutando el siguiente comando:
+Paso 3. **Verifica el estado del Pod** ejecutando el siguiente comando:
 
 ```bash
 kubectl get pods
 ```
 
-### Tarea 2: Acceder a los logs y agregar una anotación
+### Tarea 2. Acceder a los logs y agregar una anotación.
 
-Paso 1. **Acceder a los logs del Pod** con el siguiente comando:
+Paso 1. **Accede a los logs del Pod** con el siguiente comando:
 
 ```bash
 kubectl logs nginx-pod
 ```
 
-Paso 2. **Agregar una anotación al Pod** para modificar la descripción del Pod. Usa el siguiente comando:
+Paso 2. **Agrega una anotación al Pod** para modificar la descripción del Pod. Usa el siguiente comando:
 
 ```bash
 kubectl annotate pod nginx-pod description="Updated description"
 ```
 
-Paso 3. **Verificar que la anotación fue añadida correctamente** usando:
+Paso 3. **Verifica que la anotación fue añadida correctamente** usando:
 
 ```bash
 kubectl describe pod nginx-pod
 ```
 
-### Tarea 3: Eliminar un Pod
+### Tarea 3. Eliminar un Pod.
 
-Paso 1. **Eliminar el Pod** usando el siguiente comando:
+Paso 1. **Elimina el Pod** usando el siguiente comando:
 
 ```bash
 kubectl delete pod nginx-pod
 ```
 
-### Resultado esperado
+### Resultado esperado:
 
 Al completar esta práctica, los estudiantes habrán logrado:
 
@@ -105,7 +105,7 @@ Al completar esta práctica, los estudiantes habrán logrado:
 
 Al finalizar la práctica, habras gestionado eficazmente un Pod en Kubernetes, utilizando herramientas fundamentales para trabajar con un clúster Kubernetes.
 
-## Información adicional y recomendaciones
+## Información adicional y recomendaciones:
 
 ### Familiarización con el entorno:
 
