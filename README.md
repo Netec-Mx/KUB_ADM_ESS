@@ -72,7 +72,8 @@ En este curso, aprenderá sobre la instalación de un clúster de Kubernetes de 
 - [Práctica 13. Configuración y Gestión del Scheduler en Kubernetes.](./Capítulo11/README.md)
    - **Descripción**:  Configurar el Scheduler, especificar Pods, aplicar reglas de afinidad y gestionar taints y tolerations en un clúster de Kubernetes para optimizar la asignación de Pods y mantener la salud del clúster.
    - ⏱️ **Duración estimada**: 37 minutos.
-  
+<br/>
+
 - [Práctica 14. Implementación de monitoreo y logging.](./Capítulo12/README.md)
    - **Descripción**:  Configurar herramientas de monitore y logging en un clúster de Kubernetes, implementando Prometheus, Grafana y Fluentd, verificando su correctar integración y funcionamiento.
    - ⏱️ **Duración estimada**: 41 minutos.
