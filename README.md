@@ -10,8 +10,8 @@ En este curso, aprenderá sobre la instalación de un clúster de Kubernetes de 
 ## Índice:
 
 - [Práctica 1. Explorando Kubernetes.](./Capítulo01_Práctica1/README.md)
- - **Descripción**: Conocer el sitio oficial de Kubernetes.
- - ⏱️ **Duración estimada**: 25 minutos.
+  - **Descripción**: Conocer el sitio oficial de Kubernetes.
+  - ⏱️ **Duración estimada**: 25 minutos.
 <br/>
 
 - [Práctica 2. Repositorio oficial de Kubernetes.](./Capítulo1/README_1.2.md)
@@ -20,8 +20,8 @@ En este curso, aprenderá sobre la instalación de un clúster de Kubernetes de 
 <br/>
 
 - [Práctica 3. Introducción y Configuración de Minikube para la Gestión de Clústeres Kubernetes Locales.](./Capítulo02_Práctica3/README.md)
- - **Descripción**: Conocer los aspectos generales de la instalación y utilización de Minikube.
- - ⏱️ **Duración estimada**: 27 minutos.
+  - **Descripción**: Conocer los aspectos generales de la instalación y utilización de Minikube.
+  - ⏱️ **Duración estimada**: 27 minutos.
 <br/>
  
 - [Práctica 4. Instalación del plano de control.](./Capítulo02_Práctica4/README.md)
@@ -30,18 +30,18 @@ En este curso, aprenderá sobre la instalación de un clúster de Kubernetes de 
 <br/>
   
 - [Práctica 5. Implementación y gestión de un Pod en Kubernetes.](./Capítulo03/README.md)
- - **Descripción**:  Implementar y gestionar un Pod en Kubernetes desde la creación del clúster hasta la configuración de servicios y políticas de red.
- - ⏱️ **Duración estimada**: 25 minutos.
+  - **Descripción**:  Implementar y gestionar un Pod en Kubernetes desde la creación del clúster hasta la configuración de servicios y políticas de red.
+  - ⏱️ **Duración estimada**: 25 minutos.
 <br/>
  
 - [Práctica 6. Configuración y gestión de Pod en Kubernetes.](./Capítulo04/README.md)
- - **Descripción**:  Aprender a interactuar con el clúster de Kubernetes utilizando herramientas como kubectl, creando y manipulando Pods, accediendo a sus logs y utilizando Annotations para agregar metadatos relevantes. 
-- ⏱️ **Duración estimada**: 42 minutos.
+  - **Descripción**:  Aprender a interactuar con el clúster de Kubernetes utilizando herramientas como kubectl, creando y manipulando Pods, accediendo a sus logs y utilizando Annotations para agregar metadatos relevantes. 
+ - ⏱️ **Duración estimada**: 42 minutos.
 <br/>
  
 - [Práctica 7. Crear y configurar recursos API.](./Capítulo05/README.md)
- - **Descripción**:  Implementar y gestionar recursos API básicos en un clúster de Kubernetes para comprender su estructura y funcionalidad, asegurando la correcta aplicación de políticas RBAC.
- - ⏱️ **Duración estimada**: 40 minutos.
+  - **Descripción**:  Implementar y gestionar recursos API básicos en un clúster de Kubernetes para comprender su estructura y funcionalidad, asegurando la correcta aplicación de políticas RBAC.
+  - ⏱️ **Duración estimada**: 40 minutos.
 <br/>
   
 - [Práctica 8. Implementación de DaemonSets y uso de etiquetas.](./Capítulo06/README.md)
