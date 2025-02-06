@@ -36,7 +36,7 @@ En este curso, aprenderá sobre la instalación de un clúster de Kubernetes de 
  
 - [Práctica 6. Configuración y gestión de Pod en Kubernetes.](./Capítulo04/README.md)
   - **Descripción**:  Aprender a interactuar con el clúster de Kubernetes utilizando herramientas como kubectl, creando y manipulando Pods, accediendo a sus logs y utilizando Annotations para agregar metadatos relevantes. 
- - ⏱️ **Duración estimada**: 42 minutos.
+  - ⏱️ **Duración estimada**: 42 minutos.
 <br/>
  
 - [Práctica 7. Crear y configurar recursos API.](./Capítulo05/README.md)
